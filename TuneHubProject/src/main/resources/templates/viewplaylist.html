@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>View Songs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">PlayList Are:</h1>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>PlayList Id</th>
+                    <th>PlayList Name</th>
+                    <th>PlayList Songs</th>
+              
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="list: ${plist}">
+                    <td th:text="${list.id}"></td>
+                    <td th:text="${list.name}"></td>
+                    <td><ul><li th:each="son:${list.song}">
+                        <audio controls>
+                            <source th:src="${son.link}" type="audio/mpeg">
+                        </audio>
+                   </li> </ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

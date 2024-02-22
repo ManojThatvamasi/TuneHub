@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+     h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        body {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/register" method="post">
+    	<h1>Register Page</h1>
+        <label for="username">User Name:</label>
+        <input type="text" name="username" id="username" required/>
+        <br/><br/>
+        <label for="email">Email ID:</label>
+        <input type="email" name="email" id="email" required/>
+        <br/><br/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required/>
+        <br/><br/>
+        <label>Gender:</label>
+        <label>M<input type="radio" name="gender" value="male"></label>
+        <label>F<input type="radio" name="gender" value="female"></label>
+        <label>O<input type="radio" name="gender" value="other"></label>
+        <br/><br/>
+        <label>Role:</label>
+        <label>Admin<input type="radio" name="role" value="admin"></label>
+        <label>User<input type="radio" name="role" value="user"></label>
+        <br/><br/>
+        <label for="address">Address:</label>
+        <textarea rows="2" cols="5" name="address" id="address"></textarea>
+        <br/><br/>
+        <input type="submit" value="REGISTER" class="btn btn-primary"/>
+    </form>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
